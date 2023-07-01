@@ -15,14 +15,18 @@ function nextSequence() {
     var randomChosenColor = buttonColors[randomNumber];
 
     gamePattern.push(randomChosenColor);
-}
 
-/*I am going to use jQuery to get the ID of the random number that is choosen.
-After, I will add the fadein and fadeout animation to it. 
-*/ 
-$("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
+    /*I am going to use jQuery to get the ID of the random number that is choosen.
+    After, I will add the fadein and fadeout animation to it. 
+    */ 
+    $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
 
-//I am going to play a specific sound whenever a color a selected.
+    //I am going to play a specific sound whenever a color a selected.
 //That sound will be unique to that color.
 
-var audio = new Audio("sounds/" + randomChosenColor + ".mp3");
+    var audio = new Audio("sounds/" + randomChosenColor + ".mp3");
+    audio.play();
+}
+
+
+
